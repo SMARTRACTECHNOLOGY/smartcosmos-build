@@ -378,51 +378,64 @@
         <tag>HEAD</tag>
         <url>https://github.com/SMARTRACTECHNOLOGY/smartcosmos-cluster/tree/master/</url>
     </scm>
+    <distributionManagement>
+        <downloadUrl>https://github.com/SMARTRACTECHNOLOGY</downloadUrl>
+        <repository>
+            <id>bintray-smartractechnology-maven</id>
+            <name>SMART COSMOS Objects Releases</name>
+            <url>https://api.bintray.com/maven/smartractechnology/maven/smartcosmos-objects/;publish=1</url>
+        </repository>
+        <snapshotRepository>
+            <id>bintray-smartractechnology-maven</id>
+            <name>SMART COSMOS Objects Snapshots</name>
+            <url>https://api.bintray.com/maven/smartractechnology/maven/smartcosmos-objects-snapshots/;publish=1</url>
+        </snapshotRepository>
+    </distributionManagement>
     <profiles>
         <profile>
             <id>spring</id>
             <repositories>
                 <repository>
-                    <id>spring-snapshots</id>
-                    <name>Spring Snapshots</name>
-                    <url>http://repo.spring.io/libs-snapshot-local</url>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>
+                    <id>spring-snapshots</id>
+                    <name>Spring Snapshots</name>
+                    <url>http://repo.spring.io/libs-snapshot-local</url>
                 </repository>
                 <repository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
                     <id>spring-milestones</id>
                     <name>Spring Milestones</name>
                     <url>http://repo.spring.io/libs-milestone-local</url>
+                </repository>
+                <repository>
                     <snapshots>
                         <enabled>false</enabled>
                     </snapshots>
-                </repository>
-                <repository>
                     <id>spring-releases</id>
                     <name>Spring Releases</name>
                     <url>http://repo.spring.io/release</url>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
                 </repository>
             </repositories>
             <pluginRepositories>
                 <pluginRepository>
-                    <id>spring-snapshots</id>
-                    <name>Spring Snapshots</name>
-                    <url>http://repo.spring.io/libs-snapshot-local</url>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>
+                    <id>spring-snapshots</id>
+                    <name>Spring Snapshots</name>
+                    <url>http://repo.spring.io/libs-snapshot-local</url>
                 </pluginRepository>
                 <pluginRepository>
-                    <id>spring-milestones</id>
-                    <name>Spring Milestones</name>
-                    <url>http://repo.spring.io/libs-milestone-local</url>
                     <snapshots>
                         <enabled>false</enabled>
                     </snapshots>
+                    <id>spring-milestones</id>
+                    <name>Spring Milestones</name>
+                    <url>http://repo.spring.io/libs-milestone-local</url>
                 </pluginRepository>
             </pluginRepositories>
         </profile>
