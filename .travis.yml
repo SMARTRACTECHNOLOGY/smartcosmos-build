@@ -1,5 +1,7 @@
 sudo: false
 language: java
+install:
+- mvn -s .settings.xml install -q -U -DskipTests=true -Dmaven.test.redirectTestOutputToFile=true
 script:
 - 'mvn -s .settings.xml install -nsu -Dmaven.test.redirectTestOutputToFile=true'
 jdk:
