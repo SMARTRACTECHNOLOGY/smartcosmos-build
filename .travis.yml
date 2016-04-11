@@ -1,4 +1,7 @@
+sudo: false
 language: java
+script:
+- 'mvn -s .settings.xml install -nsu -Dmaven.test.redirectTestOutputToFile=true'
 jdk:
 - oraclejdk8
 notifications:
