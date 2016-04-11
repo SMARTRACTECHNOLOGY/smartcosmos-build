@@ -23,6 +23,7 @@
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies-parent</artifactId>
         <version>1.1.0.BUILD-SNAPSHOT</version>
+        <relativePath></relativePath>
     </parent>
     <groupId>net.smartcosmos</groupId>
     <artifactId>smartcosmos-dependencies</artifactId>
