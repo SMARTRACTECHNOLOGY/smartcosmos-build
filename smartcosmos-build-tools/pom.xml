@@ -85,7 +85,6 @@
         <url>https://github.com/SMARTRACTECHNOLOGY/smartcosmos-build/tree/master/smartcosmos-build-tools</url>
     </scm>
     <distributionManagement>
-        <downloadUrl>https://github.com/SMARTRACTECHNOLOGY</downloadUrl>
         <repository>
             <id>ossrh</id>
             <name>SMART COSMOS Objects Releases</name>
