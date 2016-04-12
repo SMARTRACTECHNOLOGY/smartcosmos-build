@@ -2,7 +2,7 @@
 <settings>
     <servers>
         <server>
-            <id>bintray-smartractechnology-maven</id>
+            <id>ossrh</id>
             <username>${env.CI_DEPLOY_USERNAME}</username>
             <password>${env.CI_DEPLOY_PASSWORD}</password>
         </server>

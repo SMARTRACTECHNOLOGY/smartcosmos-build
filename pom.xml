@@ -381,14 +381,14 @@
     <distributionManagement>
         <downloadUrl>https://github.com/SMARTRACTECHNOLOGY</downloadUrl>
         <repository>
-            <id>bintray-smartractechnology-maven</id>
+            <id>ossrh</id>
             <name>SMART COSMOS Objects Releases</name>
-            <url>https://api.bintray.com/maven/smartractechnology/maven/smartcosmos-objects/;publish=1</url>
+            <url>https://oss.sonatype.org/</url>
         </repository>
         <snapshotRepository>
-            <id>bintray-smartractechnology-maven</id>
+            <id>ossrh</id>
             <name>SMART COSMOS Objects Snapshots</name>
-            <url>https://api.bintray.com/maven/smartractechnology/maven/smartcosmos-objects-snapshots/;publish=1</url>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
     <profiles>
