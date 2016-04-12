@@ -2,6 +2,7 @@ sudo: false
 language: java
 install:
 - mvn -s .settings.xml install -q -U -DskipTests=true -Dmaven.test.redirectTestOutputToFile=true
+- echo "FEATURE_BRANCH=$FEATURE_BRANCH\n TRAVIS_BRANCH=${TRAVIS_BRANCH}\n MVN_GOAL=${MVN_GOAL}\n INTERNAL_BUILD=$INTERNAL_BUILD\n VERSION=$VERSION\n TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST\n TRAVIS_TAG=$TRAVIS_TAG"
 script:
 - mvn -s .settings.xml $MVN_GOAL -nsu -Dmaven.test.redirectTestOutputToFile=true
 jdk:
