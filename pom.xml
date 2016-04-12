@@ -379,7 +379,6 @@
         <url>https://github.com/SMARTRACTECHNOLOGY/smartcosmos-cluster/tree/master/</url>
     </scm>
     <distributionManagement>
-        <downloadUrl>https://github.com/SMARTRACTECHNOLOGY</downloadUrl>
         <repository>
             <id>ossrh</id>
             <name>SMART COSMOS Objects Releases</name>
@@ -390,6 +389,7 @@
             <name>SMART COSMOS Objects Snapshots</name>
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </snapshotRepository>
+        <downloadUrl>https://github.com/SMARTRACTECHNOLOGY</downloadUrl>
     </distributionManagement>
     <profiles>
         <profile>

@@ -96,6 +96,7 @@
             <name>SMART COSMOS Objects Snapshots</name>
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </snapshotRepository>
+        <downloadUrl>https://github.com/SMARTRACTECHNOLOGY</downloadUrl>
     </distributionManagement>
     <profiles>
         <profile>
