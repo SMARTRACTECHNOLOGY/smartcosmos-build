@@ -37,7 +37,7 @@
     </prerequisites>
     <modules>
         <module>smartcosmos-build-tools</module>
-        <module>smartcosmos-dependencies</module>
+        <module>smartcosmos-build-dependencies</module>
     </modules>
     <properties>
 
@@ -62,7 +62,7 @@
         <dependencies>
             <dependency>
                 <groupId>net.smartcosmos</groupId>
-                <artifactId>smartcosmos-dependencies</artifactId>
+                <artifactId>smartcosmos-build-dependencies</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
