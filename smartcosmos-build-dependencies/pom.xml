@@ -55,6 +55,7 @@
         <spring-cloud.version>Brixton.RELEASE</spring-cloud.version>
         <spring-mock-mvc.version>2.8.0</spring-mock-mvc.version>
         <springfox.version>2.4.0</springfox.version>
+        <swagger-annotations.version>1.5.8</swagger-annotations.version>
     </properties>
 
     <dependencyManagement>
@@ -83,6 +84,11 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>
                 <version>${springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger-annotations.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
