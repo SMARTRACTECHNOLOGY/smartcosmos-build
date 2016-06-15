@@ -522,5 +522,21 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>internal</id>
+            <distributionManagement>
+                <repository>
+                    <id>smt-internal</id>
+                    <name>SMART COSMOS Objects Releases</name>
+                    <url>https://nexus.smartcosmos.net/nexus/content/repositories/releases/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>smt-internal-snapshots</id>
+                    <name>SMART COSMOS Objects Snapshots</name>
+                    <url>https://nexus.smartcosmos.net/nexus/content/repositories/snapshots/</url>
+                </snapshotRepository>
+                <downloadUrl>https://github.com/SMARTRACTECHNOLOGY</downloadUrl>
+            </distributionManagement>
+        </profile>
     </profiles>
 </project>
