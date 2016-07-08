@@ -41,23 +41,20 @@
         <javax.jsr.version>1.1.1</javax.jsr.version>
         <javax.validation.version>1.1.0.Final</javax.validation.version>
         <maven-enforcer-plugin.version>1.3.1</maven-enforcer-plugin.version>
-        <maven-sortpom-plugin.version>2.3.0</maven-sortpom-plugin.version>
+        <sortpom-maven-plugin.version>2.5.0</sortpom-maven-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
-
         <!-- delimiter that doesn't clash with Spring ${} placeholders -->
         <querydsl.version>4.0.8</querydsl.version>
         <!-- Override this for public releases. -->
         <release.nexusUrl>https://nexus.smartcosmos.net/nexus</release.nexusUrl>
         <!-- Override this for public releases. -->
         <release.serverId>deployment</release.serverId>
-
         <spring-cloud.version>Brixton.RELEASE</spring-cloud.version>
         <spring-mock-mvc.version>2.8.0</spring-mock-mvc.version>
         <springfox.version>2.4.0</springfox.version>
         <swagger-annotations.version>1.5.8</swagger-annotations.version>
     </properties>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -128,9 +125,9 @@
                     </configuration>
                 </plugin>
                 <plugin>
-                    <groupId>com.google.code.sortpom</groupId>
-                    <artifactId>maven-sortpom-plugin</artifactId>
-                    <version>${maven-sortpom-plugin.version}</version>
+                    <groupId>com.github.ekryd.sortpom</groupId>
+                    <artifactId>sortpom-maven-plugin</artifactId>
+                    <version>${sortpom-maven-plugin.version}</version>
                     <configuration>
                         <pomFile>pom.xml</pomFile>
                         <predefinedSortOrder>custom_1</predefinedSortOrder>
