@@ -44,20 +44,17 @@
         <asciidoctor-maven-plugin.version>1.5.3</asciidoctor-maven-plugin.version>
         <asciidoctorj-pdf.version>1.5.0-alpha.10.1</asciidoctorj-pdf.version>
         <java.version>1.8</java.version>
-
-        <maven-sortpom-plugin.version>2.3.0</maven-sortpom-plugin.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
-
         <!-- Override this for public releases. -->
         <release.nexusUrl>https://nexus.smartcosmos.net/nexus</release.nexusUrl>
         <!-- Override this for public releases. -->
         <release.serverId>deployment</release.serverId>
         <resource.delimiter>@</resource.delimiter>
+        <sortpom-maven-plugin.version>2.5.0</sortpom-maven-plugin.version>
     </properties>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -130,7 +127,6 @@
                     <artifactId>coveralls-maven-plugin</artifactId>
                     <version>4.1.0</version>
                 </plugin>
-
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>findbugs-maven-plugin</artifactId>
@@ -157,7 +153,6 @@
                         </execution>
                     </executions>
                 </plugin>
-
                 <!-- This automatically puts git repository information into the JAR file when compiled. -->
                 <plugin>
                     <groupId>pl.project13.maven</groupId>
@@ -182,7 +177,6 @@
                     <artifactId>jacoco-maven-plugin</artifactId>
                     <version>0.7.5.201505241946</version>
                 </plugin>
-
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>license-maven-plugin</artifactId>
@@ -273,31 +267,6 @@
                         <useDefaultDelimiters>false</useDefaultDelimiters>
                     </configuration>
                 </plugin>
-
-                <plugin>
-                    <groupId>com.google.code.sortpom</groupId>
-                    <artifactId>maven-sortpom-plugin</artifactId>
-                    <version>${maven-sortpom-plugin.version}</version>
-                    <configuration>
-                        <pomFile>pom.xml</pomFile>
-                        <predefinedSortOrder>custom_1</predefinedSortOrder>
-                        <lineSeparator>\n</lineSeparator>
-                        <nrOfIndentSpace>4</nrOfIndentSpace>
-                        <encoding>${project.build.sourceEncoding}</encoding>
-                        <sortProperties>true</sortProperties>
-                        <keepBlankLines>true</keepBlankLines>
-                        <sortDependencies>scope,artifactId</sortDependencies>
-                        <sortPlugins>artifactId</sortPlugins>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>sort</goal>
-                            </goals>
-                            <phase>verify</phase>
-                        </execution>
-                    </executions>
-                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
@@ -329,11 +298,34 @@
                         </excludes>
                     </configuration>
                 </plugin>
+                <plugin>
+                    <groupId>com.github.ekryd.sortpom</groupId>
+                    <artifactId>sortpom-maven-plugin</artifactId>
+                    <version>${sortpom-maven-plugin.version}</version>
+                    <configuration>
+                        <pomFile>pom.xml</pomFile>
+                        <predefinedSortOrder>custom_1</predefinedSortOrder>
+                        <lineSeparator>\n</lineSeparator>
+                        <nrOfIndentSpace>4</nrOfIndentSpace>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                        <sortProperties>true</sortProperties>
+                        <keepBlankLines>true</keepBlankLines>
+                        <sortDependencies>scope,artifactId</sortDependencies>
+                        <sortPlugins>artifactId</sortPlugins>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>sort</goal>
+                            </goals>
+                            <phase>verify</phase>
+                        </execution>
+                    </executions>
+                </plugin>
             </plugins>
         </pluginManagement>
         <!-- Non-JAR related plugins that are necessary for everything across the ecosystem. -->
         <plugins>
-
             <plugin>
                 <groupId>pl.project13.maven</groupId>
                 <artifactId>git-commit-id-plugin</artifactId>
@@ -388,8 +380,8 @@
     <scm>
         <connection>scm:git:git://github.com/SMARTRACTECHNOLOGY/smartcosmos-build.git</connection>
         <developerConnection>scm:git:git://github.com/SMARTRACTECHNOLOGY/smartcosmos-build.git</developerConnection>
-        <tag>HEAD</tag>
         <url>https://github.com/SMARTRACTECHNOLOGY/smartcosmos-cluster/tree/master/</url>
+        <tag>HEAD</tag>
     </scm>
     <distributionManagement>
         <repository>
@@ -460,7 +452,6 @@
                         <artifactId>maven-checkstyle-plugin</artifactId>
                         <configuration>
                             <failOnViolation>false</failOnViolation>
-
                         </configuration>
                     </plugin>
                     <plugin>

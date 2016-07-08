@@ -19,7 +19,6 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>net.smartcosmos</groupId>
     <artifactId>smartcosmos-build-tools</artifactId>
     <version>3.0.0-SNAPSHOT</version>
@@ -48,6 +47,30 @@
                         <goals>deploy</goals>
                         <mavenExecutorId>forked-path</mavenExecutorId>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>com.github.ekryd.sortpom</groupId>
+                    <artifactId>sortpom-maven-plugin</artifactId>
+                    <version>2.5.0</version>
+                    <configuration>
+                        <pomFile>pom.xml</pomFile>
+                        <predefinedSortOrder>custom_1</predefinedSortOrder>
+                        <lineSeparator>\n</lineSeparator>
+                        <nrOfIndentSpace>4</nrOfIndentSpace>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                        <sortProperties>true</sortProperties>
+                        <keepBlankLines>true</keepBlankLines>
+                        <sortDependencies>scope,artifactId</sortDependencies>
+                        <sortPlugins>artifactId</sortPlugins>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>sort</goal>
+                            </goals>
+                            <phase>verify</phase>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -81,8 +104,8 @@
     <scm>
         <connection>scm:git:git://github.com/SMARTRACTECHNOLOGY/smartcosmos-build.git/smartcosmos-build-tools</connection>
         <developerConnection>scm:git@github.com:SMARTRACTECHNOLOGY/smartcosmos-build.git/smartcosmos-build-tools</developerConnection>
-        <tag>HEAD</tag>
         <url>https://github.com/SMARTRACTECHNOLOGY/smartcosmos-build/tree/master/smartcosmos-build-tools</url>
+        <tag>HEAD</tag>
     </scm>
     <distributionManagement>
         <repository>
@@ -118,6 +141,5 @@
                 </plugins>
             </build>
         </profile>
-
     </profiles>
 </project>
