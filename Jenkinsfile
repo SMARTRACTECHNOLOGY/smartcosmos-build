@@ -1,1 +1,4 @@
-smartcosmosMavenBuild {}
+smartcosmosMavenBuild {
+
+    ignoreMissingTests = true
+}
