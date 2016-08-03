@@ -19,12 +19,6 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-dependencies-parent</artifactId>
-        <version>1.1.1.RELEASE</version>
-        <relativePath></relativePath>
-    </parent>
     <groupId>net.smartcosmos</groupId>
     <artifactId>smartcosmos-build-dependencies</artifactId>
     <version>3.0.0-SNAPSHOT</version>
@@ -51,7 +45,8 @@
         <!-- Override this for public releases. -->
         <release.serverId>deployment</release.serverId>
         <sortpom-maven-plugin.version>2.5.0</sortpom-maven-plugin.version>
-        <spring-cloud.version>Brixton.RELEASE</spring-cloud.version>
+        <spring-boot.version>1.3.7.RELEASE</spring-boot.version>
+        <spring-cloud.version>Brixton.SR4</spring-cloud.version>
         <spring-mock-mvc.version>2.8.0</spring-mock-mvc.version>
         <springfox.version>2.4.0</springfox.version>
         <swagger-annotations.version>1.5.8</swagger-annotations.version>
@@ -92,6 +87,13 @@
                 <groupId>io.swagger</groupId>
                 <artifactId>swagger-annotations</artifactId>
                 <version>${swagger-annotations.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
