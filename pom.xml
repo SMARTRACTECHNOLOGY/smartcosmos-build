@@ -393,8 +393,8 @@
         </developer>
     </developers>
     <scm>
-        <connection>scm:git:git://github.com/SMARTRACTECHNOLOGY/smartcosmos-build.git</connection>
-        <developerConnection>scm:git:git://github.com/SMARTRACTECHNOLOGY/smartcosmos-build.git</developerConnection>
+        <connection>scm:git:ssh://git@github.com:SMARTRACTECHNOLOGY/smartcosmos-build.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:SMARTRACTECHNOLOGY/smartcosmos-build.git</developerConnection>
         <url>https://github.com/SMARTRACTECHNOLOGY/smartcosmos-cluster/tree/master/</url>
         <tag>HEAD</tag>
     </scm>
