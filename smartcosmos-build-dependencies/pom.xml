@@ -192,8 +192,8 @@
         </developer>
     </developers>
     <scm>
-        <connection>scm:git:ssh://git@github.com:SMARTRACTECHNOLOGY/smartcosmos-build.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:SMARTRACTECHNOLOGY/smartcosmos-build.git</developerConnection>
+        <connection>scm:git:ssh://git@github.com/SMARTRACTECHNOLOGY/smartcosmos-build.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/SMARTRACTECHNOLOGY/smartcosmos-build.git</developerConnection>
         <url>https://github.com/SMARTRACTECHNOLOGY/smartcosmos-build/tree/master/smartcosmos-dependencies</url>
         <tag>HEAD</tag>
     </scm>
