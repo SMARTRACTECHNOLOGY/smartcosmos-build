@@ -9,19 +9,32 @@
     </servers>
     <profiles>
         <profile>
+            <id>ossrh</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <gpg.executable>gpg2</gpg.executable>
+                <gpg.keyname>${env.GPG_USER}</gpg.keyname>
+                <gpg.passphrase>${env.GPG_PASSWD}</gpg.passphrase>
+            </properties>
+            <repositories>
+                <repository>
+                    <id>ossrh</id>
+                    <name>Sonatype OSS Snapshots</name>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
+        <profile>
             <id>spring</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <repositories>
-              <repository>
-                  <id>ossrh</id>
-                  <name>Sonatype OSS Snapshots</name>
-                  <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-                  <snapshots>
-                      <enabled>true</enabled>
-                  </snapshots>
-              </repository>
                 <repository>
                     <id>spring-snapshots</id>
                     <name>Spring Snapshots</name>
