@@ -23,11 +23,11 @@
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies-parent</artifactId>
         <version>1.1.1.RELEASE</version>
-        <relativePath></relativePath>
+        <relativePath />
     </parent>
     <groupId>net.smartcosmos</groupId>
     <artifactId>smartcosmos-build-dependencies</artifactId>
-    <version>3.0.0</version>
+    <version>3.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>SMART COSMOS Build Dependencies</name>
     <description>Extended list of dependencies used in Spring Boot, Spring Cloud, and additional libraries.</description>
@@ -195,7 +195,7 @@
         <connection>scm:git:ssh://git@github.com/SMARTRACTECHNOLOGY/smartcosmos-build.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/SMARTRACTECHNOLOGY/smartcosmos-build.git</developerConnection>
         <url>https://github.com/SMARTRACTECHNOLOGY/smartcosmos-build/tree/master/smartcosmos-dependencies</url>
-        <tag>v3.0.0</tag>
+        <tag>HEAD</tag>
     </scm>
     <distributionManagement>
         <repository>
