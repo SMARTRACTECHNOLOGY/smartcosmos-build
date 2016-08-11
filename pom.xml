@@ -249,6 +249,11 @@
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-gpg-plugin</artifactId>
+                    <version>1.6</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>2.10.4</version>
                 </plugin>
@@ -479,12 +484,6 @@
             <id>release</id>
             <build>
                 <plugins>
-                    <plugin>
-                        <artifactId>maven-checkstyle-plugin</artifactId>
-                        <configuration>
-                            <failOnViolation>false</failOnViolation>
-                        </configuration>
-                    </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
