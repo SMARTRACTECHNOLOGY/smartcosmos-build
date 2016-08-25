@@ -559,5 +559,21 @@
                 <downloadUrl>https://github.com/SMARTRACTECHNOLOGY</downloadUrl>
             </distributionManagement>
         </profile>
+        <profile>
+            <id>public</id>
+            <distributionManagement>
+                <repository>
+                    <id>ossrh</id>
+                    <name>Sonatype OSS Snapshots</name>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>ossrh</id>
+                    <name>Maven Central</name>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                </snapshotRepository>
+                <downloadUrl>https://github.com/SMARTRACTECHNOLOGY</downloadUrl>
+            </distributionManagement>
+        </profile>
     </profiles>
 </project>
