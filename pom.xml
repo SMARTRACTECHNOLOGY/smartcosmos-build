@@ -41,10 +41,8 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
-        <!-- Override this for public releases. -->
-        <release.nexusUrl>https://nexus.smartcosmos.net/nexus</release.nexusUrl>
-        <!-- Override this for public releases. -->
-        <release.serverId>smt-internal</release.serverId>
+        <release.serverId>ossrh</release.serverId>
+        <release.nexusUrl>https://oss.sonatype.org/</release.nexusUrl>
         <resource.delimiter>@</resource.delimiter>
         <sortpom-maven-plugin.version>2.5.0</sortpom-maven-plugin.version>
         <spring-boot.version>1.3.7.RELEASE</spring-boot.version>
@@ -658,6 +656,10 @@
         </profile>
         <profile>
             <id>internal</id>
+            <properties>
+                <release.nexusUrl>https://nexus.smartcosmos.net/nexus</release.nexusUrl>
+                <release.serverId>smt-internal</release.serverId>
+            </properties>
             <distributionManagement>
                 <repository>
                     <id>smt-internal</id>
@@ -674,6 +676,10 @@
         </profile>
         <profile>
             <id>public</id>
+            <properties>
+                <release.serverId>ossrh</release.serverId>
+                <release.nexusUrl>https://oss.sonatype.org/</release.nexusUrl>
+            </properties>
             <distributionManagement>
                 <repository>
                     <id>ossrh</id>
