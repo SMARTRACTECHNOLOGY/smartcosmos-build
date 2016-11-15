@@ -21,7 +21,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.smartcosmos</groupId>
     <artifactId>smartcosmos-build-dependencies</artifactId>
-    <version>3.1.1-SNAPSHOT</version>
+    <version>3.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>SMART COSMOS Build Dependencies</name>
     <description>Extended list of dependencies used in Spring Boot, Spring Cloud, and additional libraries.</description>
