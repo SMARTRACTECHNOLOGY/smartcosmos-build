@@ -48,6 +48,18 @@
                         <mavenExecutorId>forked-path</mavenExecutorId>
                     </configuration>
                 </plugin>
+                <!-- This replaces the standard maven deploy plugin. -->
+                <plugin>
+                    <groupId>org.sonatype.plugins</groupId>
+                    <artifactId>nexus-staging-maven-plugin</artifactId>
+                    <version>1.6.7</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <nexusUrl>${release.nexusUrl}</nexusUrl>
+                        <serverId>${release.serverId}</serverId>
+                        <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                    </configuration>
+                </plugin>
                 <plugin>
                     <groupId>com.github.ekryd.sortpom</groupId>
                     <artifactId>sortpom-maven-plugin</artifactId>
@@ -74,6 +86,19 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.github.ekryd.sortpom</groupId>
+                <artifactId>sortpom-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
     </build>
     <url>http://smartcosmos.net</url>
     <inceptionYear>2015</inceptionYear>
@@ -107,19 +132,6 @@
         <url>https://github.com/SMARTRACTECHNOLOGY/smartcosmos-build/tree/master/smartcosmos-build-tools</url>
         <tag>HEAD</tag>
     </scm>
-    <distributionManagement>
-        <repository>
-            <id>ossrh</id>
-            <name>SMART COSMOS Objects Releases</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <name>SMART COSMOS Objects Snapshots</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </snapshotRepository>
-        <downloadUrl>https://github.com/SMARTRACTECHNOLOGY</downloadUrl>
-    </distributionManagement>
     <profiles>
         <profile>
             <id>release</id>
@@ -140,6 +152,46 @@
                     </plugin>
                 </plugins>
             </build>
+        </profile>
+        <profile>
+            <id>internal</id>
+            <properties>
+                <release.nexusUrl>https://nexus.smartcosmos.net/nexus</release.nexusUrl>
+                <release.serverId>smt-internal</release.serverId>
+            </properties>
+            <distributionManagement>
+                <repository>
+                    <id>smt-internal</id>
+                    <name>SMART COSMOS Objects Releases</name>
+                    <url>https://nexus.smartcosmos.net/nexus/content/repositories/releases/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>smt-internal-snapshots</id>
+                    <name>SMART COSMOS Objects Snapshots</name>
+                    <url>https://nexus.smartcosmos.net/nexus/content/repositories/snapshots/</url>
+                </snapshotRepository>
+                <downloadUrl>https://github.com/SMARTRACTECHNOLOGY</downloadUrl>
+            </distributionManagement>
+        </profile>
+        <profile>
+            <id>public</id>
+            <properties>
+                <release.nexusUrl>https://oss.sonatype.org/</release.nexusUrl>
+                <release.serverId>ossrh</release.serverId>
+            </properties>
+            <distributionManagement>
+                <repository>
+                    <id>ossrh</id>
+                    <name>Sonatype OSS Snapshots</name>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>ossrh</id>
+                    <name>Maven Central</name>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                </snapshotRepository>
+                <downloadUrl>https://github.com/SMARTRACTECHNOLOGY</downloadUrl>
+            </distributionManagement>
         </profile>
     </profiles>
 </project>
