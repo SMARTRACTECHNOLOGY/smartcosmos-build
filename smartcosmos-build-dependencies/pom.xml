@@ -49,8 +49,6 @@
         <spring-cloud.version>Brixton.SR4</spring-cloud.version>
         <spring-data-releasetrain.version>Hopper-SR1</spring-data-releasetrain.version>
         <spring-mock-mvc.version>2.8.0</spring-mock-mvc.version>
-        <springfox.version>2.4.0</springfox.version>
-        <swagger-annotations.version>1.5.8</swagger-annotations.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -75,21 +73,6 @@
                 <version>${spring-mock-mvc.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
-                <version>${springfox.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger2</artifactId>
-                <version>${springfox.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.swagger</groupId>
-                <artifactId>swagger-annotations</artifactId>
-                <version>${swagger-annotations.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring-boot.version}</version>
@@ -109,12 +92,6 @@
                 <version>${spring-data-releasetrain.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-staticdocs</artifactId>
-                <version>${springfox.version}</version>
-                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
