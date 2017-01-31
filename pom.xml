@@ -530,19 +530,6 @@
         <url>https://github.com/SMARTRACTECHNOLOGY/smartcosmos-cluster/tree/master/</url>
         <tag>HEAD</tag>
     </scm>
-    <distributionManagement>
-        <repository>
-            <id>ossrh</id>
-            <name>SMART COSMOS Objects Releases</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <name>SMART COSMOS Objects Snapshots</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </snapshotRepository>
-        <downloadUrl>https://github.com/SMARTRACTECHNOLOGY</downloadUrl>
-    </distributionManagement>
     <profiles>
         <profile>
             <id>spring</id>
